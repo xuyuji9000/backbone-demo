@@ -11,3 +11,5 @@ $app->get('/index', App\Controllers\IndexController::class.':home');
 $app->get('/db', App\Controllers\DBController::class.':index');
 $app->get('/uploadimage/view', App\Controllers\UploadImageController::class.':view');
 $app->post('/uploadimage/upload', App\Controllers\UploadImageController::class.':upload');
+
+$app->get('/users', App\Controllers\IndexController::class.':users');
