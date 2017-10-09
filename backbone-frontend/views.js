@@ -15,6 +15,13 @@ views.UserView = Backbone.View.extend({
 views.UsersView = Backbone.View.extend({
   tagName: 'ul',
   initialize: function() {
+    var self = this
+    this.collection = new Users;
+    this.collection.fetch({
+      success: function() {
+        self.render()
+      }
+    });
     this.render();
   },
 
