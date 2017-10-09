@@ -1,4 +1,6 @@
-var UserView = Backbone.View.extend({
+var views = {}
+
+views.UserView = Backbone.View.extend({
   tagName: 'li',
   my_template: _.template("<%= id %> : <%= name %>"),
   initialize: function() {

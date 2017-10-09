@@ -32,6 +32,6 @@ var user = new User({
   name: 'Karl'
 });
 
-var userView = new UserView({model: user});
+var userView = new views.UserView({model: user});
 
 $("#container").html(userView.el)
