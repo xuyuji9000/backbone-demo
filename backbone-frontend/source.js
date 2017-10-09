@@ -27,17 +27,6 @@ users.fetch();
 // 
 // var appView = new AppView();
 
-var UserView = Backbone.View.extend({
-  tagName: 'li',
-  my_template: _.template("<%= id %> : <%= name %>"),
-  initialize: function() {
-    this.render();
-  },
-  render: function() {
-    this.$el.html(this.my_template(this.model.toJSON()));
-  }
-})
-
 var user = new User({
   id: 2,
   name: 'Karl'
