@@ -10,9 +10,9 @@ var Users = Backbone.Collection.extend({
   url: 'http://localhost:9001/users'
 });
 
-var users = new Users;
-
-users.fetch();
+// var users = new Users;
+// 
+// users.fetch();
 
 // var AppView = Backbone.View.extend({
 //   el: '#container',
@@ -27,11 +27,23 @@ users.fetch();
 // 
 // var appView = new AppView();
 
-var user = new User({
-  id: 2,
-  name: 'Karl'
-});
+// var user = new User({
+//   id: 2,
+//   name: 'Karl'
+// });
 
-var userView = new views.UserView({model: user});
+var users = new Users([
+  {
+    id: 2,
+    name: 'Karl'
+  },
+  {
+    id: 4,
+    name: 'Xu'
+  }
+])
 
-$("#container").html(userView.el)
+// var userView = new views.UserView({model: user});
+var usersView = new views.UsersView({collection: users});
+
+$("#container").html(usersView.el)

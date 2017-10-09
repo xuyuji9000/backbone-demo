@@ -12,3 +12,17 @@ views.UserView = Backbone.View.extend({
 })
 
 
+views.UsersView = Backbone.View.extend({
+  tagName: 'ul',
+  initialize: function() {
+    this.render();
+  },
+
+  render: function() {
+    this.collection.each(function(item) {
+      var itemView = new views.UserView({model: item});
+
+      this.$el.append(itemView.el);
+    }, this)
+  },
+});
